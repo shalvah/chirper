@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Chirp;
+use App\Events\ChirpAction;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,6 +27,7 @@ class HomeController extends Controller
                 Chirp::where('id', $id)->decrement('likes_count');
                 break;
         }
+        event(new ChirpAction($id, $action));
         return '';
     }
 }
