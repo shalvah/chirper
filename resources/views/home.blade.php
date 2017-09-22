@@ -58,5 +58,12 @@
                 { action: action });
         };
 
+
+        Echo.channel('chirp-events')
+            .listen('ChirpAction', function (event) {
+                var action = event.action;
+                updateChirpStats[action](event.chirpId);
+            })
+
     </script>
 @endsection
