@@ -25,8 +25,9 @@
             </div>
         @endforeach
     </div>
+@endsection
 
-
+@section('js')
     <script>
         var updateChirpStats = {
             Like: function (chirpId) {
