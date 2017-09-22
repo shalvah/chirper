@@ -25,4 +25,38 @@
             </div>
         @endforeach
     </div>
+
+
+    <script>
+        var updateChirpStats = {
+            Like: function (chirpId) {
+                document.querySelector('#likes-count-' + chirpId).textContent++;
+            },
+
+            Unlike: function(chirpId) {
+                document.querySelector('#likes-count-' + chirpId).textContent--;
+            }
+        };
+
+
+        var toggleButtonText = {
+            Like: function(button) {
+                button.textContent = "Unlike";
+            },
+
+            Unlike: function(button) {
+                button.textContent = "Like";
+            }
+        };
+
+        var actOnChirp = function (event) {
+            var chirpId = event.target.dataset.chirpId;
+            var action = event.target.textContent;
+            toggleButtonText[action](event.target);
+            updateChirpStats[action](chirpId);
+            axios.post('/chirps/' + chirpId + '/act',
+                { action: action });
+        };
+
+    </script>
 @endsection
