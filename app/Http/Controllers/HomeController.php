@@ -27,7 +27,7 @@ class HomeController extends Controller
                 Chirp::where('id', $id)->decrement('likes_count');
                 break;
         }
-        event(new ChirpAction($id, $action));
+        broadcast(new ChirpAction($id, $action))->toOthers();
         return '';
     }
 }
