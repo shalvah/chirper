@@ -62,6 +62,7 @@
 
         Echo.channel('chirp-events')
             .listen('ChirpAction', function (event) {
+                console.log(event);
                 var action = event.action;
                 updateChirpStats[action](event.chirpId);
             })
