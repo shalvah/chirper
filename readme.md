@@ -12,7 +12,7 @@ The app's homepage displays a list of chirps (i.e. tweets). When you open the ap
 Clone the project:
 
 ```bash
-git clone https://github.com/shalvah/poster
+git clone https://github.com/shalvah/chirper
 ```
 
 Put your Pusher app credentials in a `.env` file in the project root:
