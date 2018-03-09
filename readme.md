@@ -9,6 +9,12 @@ The app's homepage displays a list of chirps (i.e. tweets). When you open the ap
 - A [Pusher account](https://pusher.com/signup) and a [Pusher app credentials](http://dashboard.pusher.com/)
 
 ## Getting started
+Clone the project:
+
+```bash
+git clone https://github.com/shalvah/poster
+```
+
 Put your Pusher app credentials in a `.env` file in the project root:
 ```
 PUSHER_APP_ID=WWWWWWWWW
@@ -37,6 +43,7 @@ php artisan serve
 ## Built With
 
 * [Pusher](https://pusher.com/) - APIs to enable devs building realtime features
+* [Laravel](http://laravel.com) - the PHP framework for web artisans :sunglasses:
 
 ## Acknowledgements
 
