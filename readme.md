@@ -1,14 +1,14 @@
 # chirper
-This project demonstrates how to add Twitter's realtime likes functionality to your Laravel app with Pusher. [Walkthrough](https://blog.pusher.com/build-twitter-realtime-likes-feature-with-laravel/).
+This project demonstrates how to add Twitter's realtime likes functionality to your Laravel app with Pusher. [Here's a walkthrough](https://blog.pusher.com/build-twitter-realtime-likes-feature-with-laravel/).
 
 ## Description
-The app's homepage displays a list of chirps (i.e. tweets). If you open the app in several different browser windows or tabs simultaneously, you'll see that liking a chirp in one window reflects across all windows wthout needing a page refresh.
+The app's homepage displays a list of chirps (i.e. tweets). When you open the app in several different browser windows or tabs simultaneously, you'll see that liking a chirp in one window reflects across all windows wthout needing a page refresh.
 
-## Requirements
+## Prerequisites
 - PHP >= 5.6
 - A [Pusher account](https://pusher.com/signup) and a [Pusher app credentials](http://dashboard.pusher.com/)
 
-## Running the app
+## Getting started
 Put your Pusher app credentials in a `.env` file in the project root:
 ```
 PUSHER_APP_ID=WWWWWWWWW
@@ -34,3 +34,10 @@ php artisan key:generate
 php artisan db:seed
 php artisan serve
 ```
+## Built With
+
+* [Pusher](https://pusher.com/) - APIs to enable devs building realtime features
+
+## Acknowledgements
+
+- Twitter!
